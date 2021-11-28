@@ -1,0 +1,35 @@
+@model List<DETHI.Models.NVBTModel>
+@{
+    ViewData["Title"] = "Liệt các thiết bị theo từng nhân viên";
+}
+<table border="1">
+    <tr>
+        <th>Mã thiết bị</th>
+        <th>Mã căn hộ</th>
+        <th>Lần thứ</th>
+        <th>Ngày bảo trì</th>
+        <th>Chức năng</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @item.GetType().GetProperty("MaThietBi").GetValue(item, null)
+        </td>
+        <td>
+            @item.GetType().GetProperty("MaCanHo").GetValue(item, null)
+        </td>
+        <td>
+            @item.GetType().GetProperty("LanThu").GetValue(item, null)
+        </td>
+        <td>
+            @item.GetType().GetProperty("NgayBaoTri").GetValue(item, null)
+        </td>
+        <td>
+            <a href="Delete?manv=@item.MaNhanVien&matb=@item.MaThietBi&mach=@item.MaCanHo&lt=@item.LanThu">Delete</a>
+            <a href="View?manv=@item.MaNhanVien&matb=@item.MaThietBi&mach=@item.MaCanHo&lt=@item.LanThu&nbt=@item.NgayBaoTri">View</a>
+        </td>
+    </tr>
+    }
+</table>

@@ -1,0 +1,12 @@
+@model List<DETHI.Models.NhanVienModel>
+
+<form action="/NhanVien/ListNhanVienTheoThietBi" method ="POST">
+    <label>Tên nhân viên:</label>
+    <select name="MaNhanVien" id="MaNhanVien">
+        @foreach (var item in Model)
+        {
+            <option value="@item.MaNhanVien">@item.TenNhanVien </option>
+        }
+     </select><br>
+     <input type="submit" value="Liệt Kê" name="submit" id="list" />
+</form>
