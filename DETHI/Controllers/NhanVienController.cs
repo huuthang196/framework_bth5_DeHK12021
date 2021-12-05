@@ -58,13 +58,16 @@ namespace DETHI.Controllers
             return View();
         }
 
-        public string Update(string manv, string matb, string mach, int lt, DateTime nbt)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Update(string matbcu, string machcu, int ltcu, NVBTModel nv)
         {
             DataContext context = HttpContext.RequestServices.GetService(typeof(DETHI.Models.DataContext)) as DataContext;
-            // return View(context.sqlUpdateNVBT(manv,matb,mach,lt,nbt));
-            if (context.sqlUpdateNVBT(manv, matb, mach, lt, nbt) > 0)
-                return "Cập nhật thành công";
-            return "Cập nhật thất bại";
+            if (context.sqlUpdateNVBT(matbcu, machcu, ltcu, nv) != 0)
+            {
+                return Redirect("/NhanVien/ListNhanVienTheoThietBi?id=" + nv.MaNhanVien);
+            }
+            return Redirect("/NhanVien/ListNhanVienTheoThietBi?id=" + nv.MaNhanVien);
         }
     }
 }

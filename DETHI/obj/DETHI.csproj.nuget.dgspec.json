@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Hữu Thắng\\FRAMEWORK\\DETHICKY\\DETHI\\DETHI.csproj": {}
+    "D:\\Hữu Thắng\\FRAMEWORK\\framework_bth5_DeHK12021\\DETHI\\DETHI.csproj": {}
   },
   "projects": {
-    "D:\\Hữu Thắng\\FRAMEWORK\\DETHICKY\\DETHI\\DETHI.csproj": {
+    "D:\\Hữu Thắng\\FRAMEWORK\\framework_bth5_DeHK12021\\DETHI\\DETHI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Hữu Thắng\\FRAMEWORK\\DETHICKY\\DETHI\\DETHI.csproj",
+        "projectUniqueName": "D:\\Hữu Thắng\\FRAMEWORK\\framework_bth5_DeHK12021\\DETHI\\DETHI.csproj",
         "projectName": "DETHI",
-        "projectPath": "D:\\Hữu Thắng\\FRAMEWORK\\DETHICKY\\DETHI\\DETHI.csproj",
+        "projectPath": "D:\\Hữu Thắng\\FRAMEWORK\\framework_bth5_DeHK12021\\DETHI\\DETHI.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Hữu Thắng\\FRAMEWORK\\DETHICKY\\DETHI\\obj\\",
+        "outputPath": "D:\\Hữu Thắng\\FRAMEWORK\\framework_bth5_DeHK12021\\DETHI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"

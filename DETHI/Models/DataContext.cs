@@ -133,23 +133,30 @@ namespace DETHI.Models
                 return (cmd.ExecuteNonQuery());
             }
         }
-        public int sqlUpdateNVBT(string manv, string matb, string mach, int lt, DateTime nbt)
+        public int sqlUpdateNVBT(string matbcu, string machcu, int ltcu, NVBTModel nv)
         {
+            int count = 0;
             using (SqlConnection conn = GetConnection())
             {
                 conn.Open();
                 string str = @"update NV_BT
-                               set NgayBaoTri=@nbt
-                               where MaNhanVien=@manv and MaThietBi=@matb
-                                     and MaCanHo=@mach and LanThu=@lt";
+                               set nbt=@nbt, matb=@matb, mach=@mach, lanthu=@lt
+                               where MaNhanVien=@manv and MaThietBi=@matbcu
+                                     and MaCanHo=@machcu and LanThu=@ltcu";
                 SqlCommand cmd = new SqlCommand(str, conn);
-                cmd.Parameters.AddWithValue("manv", manv);
-                cmd.Parameters.AddWithValue("matb", matb);
-                cmd.Parameters.AddWithValue("mach", mach);
-                cmd.Parameters.AddWithValue("lt", lt);
-                cmd.Parameters.AddWithValue("nbt", nbt);
-                return (cmd.ExecuteNonQuery());
+                cmd.Parameters.AddWithValue("@manv", nv.MaNhanVien);
+                cmd.Parameters.AddWithValue("@matb", nv.MaThietBi);
+                cmd.Parameters.AddWithValue("@mach", nv.MaCanHo);
+                cmd.Parameters.AddWithValue("@lt", nv.LanThu);
+                cmd.Parameters.AddWithValue("@matbcu", matbcu);
+                cmd.Parameters.AddWithValue("@machcu", machcu);
+                cmd.Parameters.AddWithValue("@ltcu", ltcu);
+                cmd.Parameters.AddWithValue("nbt", Convert.ToDateTime(nv.NgayBaoTri));
+                cmd.ExecuteNonQuery();
+                count++;
+                
             }
+            return count;
         }
     }
 }

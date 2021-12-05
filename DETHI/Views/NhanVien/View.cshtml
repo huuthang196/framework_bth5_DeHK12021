@@ -3,13 +3,27 @@
     ViewData["Title"] = "Liệt các thiết bị theo từng nhân viên";
 }
 @{
-    <form action="/NhanVien/Update" method ="POST">
-    <label>Mã nhân viên:</label><input type="text" name="manv" value="@Model.MaNhanVien"/><br>
-    <label>Mã thiết bị:</label><input type="text" name="matb" value="@Model.MaThietBi"/><br>
-    <label>Mã căn hộ:</label><input type="text" name="mach" value="@Model.MaCanHo"/><br>
-    <label>Lần thứ:</label><input type="text" name="lt" value="@Model.LanThu"/><br>
-    <label>Ngày sửa:</label><input type="datetime" name="nbt" value="@Model.NgayBaoTri"/><br>
-    <input type="submit" value="Update" name="submit" id="update" />
-    </form>
+    <div style="display: none">
+        <label for="manv">mã nhân viên: </label>
+        <input type="hidden" id="manv" name="manv" value="@Model.MaNhanVien" />
+        <input type="hidden" id="matbcu" name="matbcu" value="@Model.MaThietBi" />
+        <input type="hidden" id="machcu" name="machcu" value="@Model.MaCanHo" />
+        <input type="hidden" id="lanthucu" name="lanthucu" value="@Model.LanThu" />
+
+    </div>
+    <br>
+    <label for="matb">Mã thiết bị: </label>
+    <input type="text" id="matb" name="matb" value="@Model.MaThietBi" />
+    <br>
+    <label for="mach">Mã căn hộ: </label>
+    <input type="text" id="mach" name="mach" value="@Model.MaCanHo" />
+    <br>
+    <label for="lanThu">Lần thứ: </label>
+    <input type="text" id="lanThu" name="lanThu" value="@Model.LanThu" />
+    <br>
+    <label for="nbt">Ngày bảo trì: </label>
+    <input type="text" id="nbt" name="nbt" value="@Model.NgayBaoTri" />
+    <br>
+    <input type="submit" value="Update">
 }
 

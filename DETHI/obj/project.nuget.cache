@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "m7R2Nsycum0PY8meuJR1l7UPZ2RnimnbwYie7AxDZpgecyhWPD42Xipix1saGImILvxbFDtnjAhfIdEV7uQ6HQ==",
+  "dgSpecHash": "bGJ9WSPIHp+F9ekF4GpvFZLQObWLX/WBrQYjtKyRIC4QJ9k1Dhr4ODF5CK9/0X58bdWUOHMrB4nwSuSPBYwjnA==",
   "success": true,
-  "projectFilePath": "D:\\Hữu Thắng\\FRAMEWORK\\DETHICKY\\DETHI\\DETHI.csproj",
+  "projectFilePath": "D:\\Hữu Thắng\\FRAMEWORK\\framework_bth5_DeHK12021\\DETHI\\DETHI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
